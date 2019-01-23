@@ -13,3 +13,6 @@ install:
 
 script:
   - python -m unittest discover tests
+  - coverage run --source=fpgrowth -m unittest discover tests
+
+after_success: coveralls
